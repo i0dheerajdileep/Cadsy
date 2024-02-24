@@ -23,7 +23,7 @@ const Cadsy = ({ children }) => {
                 method: "POST",
                 url: "https://detect.roboflow.com/boobsdetector/1",
                 params: {
-                    api_key: "sZFjx8Fimj7ZtIWfDnwo"
+                    api_key: process.env.REACT_APP_API_KEY_1
                 },
                 data: image,
                 headers: {
@@ -34,7 +34,7 @@ const Cadsy = ({ children }) => {
                 method: "POST",
                 url: "https://detect.roboflow.com/dickdetector/3",
                 params: {
-                    api_key: "4WvQYKCiiFjRFkdUHdWw"
+                    api_key: process.env.REACT_APP_API_KEY_2
                 },
                 data: image,
                 headers: {
