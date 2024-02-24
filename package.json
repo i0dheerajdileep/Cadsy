@@ -1,0 +1,26 @@
+{
+  "name": "cadsy",
+  "version": "1.0.0",
+  "description": "npm package to integrate with any platform to detect nudity and vulgar content and block the user automatically ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i0dheerajdileep/Cadsy.git"
+  },
+  "keywords": [
+    "nudity",
+    "blocker",
+    "vulgar",
+    "npm",
+    "block"
+  ],
+  "author": "Dheeraj dileep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i0dheerajdileep/Cadsy/issues"
+  },
+  "homepage": "https://github.com/i0dheerajdileep/Cadsy#readme"
+}
