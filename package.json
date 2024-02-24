@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/i0dheerajdileep/Cadsy/issues"
   },
-  "homepage": "https://github.com/i0dheerajdileep/Cadsy#readme"
+  "homepage": "https://github.com/i0dheerajdileep/Cadsy#readme",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "react": "^18.2.0"
+  }
 }

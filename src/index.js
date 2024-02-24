@@ -1,1 +1,1 @@
-export { default } from './Cadsy';
+export {default} from './Cadsy';

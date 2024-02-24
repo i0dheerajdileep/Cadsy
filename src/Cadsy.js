@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import axios from 'axios';
 
 const Cadsy = ({ children }) => {
   const videoRef = useRef(null);
@@ -13,20 +14,39 @@ const Cadsy = ({ children }) => {
 
       ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
 
-      const base64Image = canvas.toDataURL('image/jpeg');
+      const image = canvas.toDataURL('image/jpeg');
 
       try {
-        const response = await fetch('YOUR_API_ENDPOINT', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ image: base64Image }),
-        });
+        // Perform two API requests concurrently
+        const [response1, response2] = await Promise.all([
+            axios({
+                method: "POST",
+                url: "https://detect.roboflow.com/boobsdetector/1",
+                params: {
+                    api_key: "sZFjx8Fimj7ZtIWfDnwo"
+                },
+                data: image,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            }),
+            axios({
+                method: "POST",
+                url: "https://detect.roboflow.com/dickdetector/3",
+                params: {
+                    api_key: "4WvQYKCiiFjRFkdUHdWw"
+                },
+                data: image,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            }),
+        ]);
 
-        console.log('Image posted to API:', response);
+        console.log('Image posted to API 1:', response1);
+        console.log('Image posted to API 2:', response2);
       } catch (error) {
-        console.error('Error posting image to API:', error);
+        console.error('Error posting images to APIs:', error);
       }
     }
   };
