@@ -1,6 +1,6 @@
 {
   "name": "cadsy",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "npm package to integrate with any platform to detect nudity and vulgar content and block the user automatically ",
   "main": "index.js",
   "scripts": {
