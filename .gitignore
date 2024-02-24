@@ -1,23 +1,25 @@
-# Dependency directories
+# Ignore node_modules directory
 node_modules/
 
-# Production build directory
-build/
+# Ignore any built files
+/dist/
+/build/
 
-# Environment file
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Ignore environment-specific files
 .env
 
-# IDE directories
+# Ignore any files created by editors or IDEs
 .vscode/
 .idea/
 
-# Log files
-*.log
+# Ignore npm-debug.log files
+npm-debug.log*
 
-# OS generated files
-.DS_Store
-Thumbs.db
+# Ignore yarn.lock file
+yarn.lock
+
+# Ignore any file that may contain sensitive or user-specific information
+*.secret
+
+# Ignore any files created by testing frameworks
+coverage/
